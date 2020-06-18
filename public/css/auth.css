@@ -1,0 +1,17 @@
+.body{
+    background-color: #f5f5f5;
+    padding: 40px 40px;
+}
+
+.logo{
+    font-size: 75px;
+}
+
+.formulario{
+    margin: auto;
+    max-width: 330px;
+}
+
+.formulario__boton-subir{
+    width: 100%;
+}

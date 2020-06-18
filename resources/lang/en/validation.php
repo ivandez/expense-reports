@@ -130,9 +130,27 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'required' => 'El campo nombre es obligatorio.'
         ],
+        'name' => [
+            'min' => 'El nombre debe tener al menos 3 caracteres.',
+        ],
+        'email' => [
+            'required' => 'El campo de correo electrónico es obligatorio.',
+        ],
+        'email' => [
+            'email' => 'El correo electrónico debe ser una dirección de correo electrónico válida.',
+        ],
+        'email' => [
+            'unique' => 'El email ya ha sido registrado.',
+        ],
+        'password' => [
+            'required' => 'El campo de contraseña es obligatorio.',
+        ],
+        'password' => [
+            'confirmed' => 'La confirmación de contraseña no coincide.',
+        ]
     ],
 
     /*
