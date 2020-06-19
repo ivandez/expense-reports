@@ -25,7 +25,8 @@
         <input type="password" class="form-control" autocomplete="off" name="password" placeholder="Tu contraseña">        
         {!! $errors->first('password', '<small><div class="alert alert-danger mb-0" role="alert">:message</div></small>') !!}
 
-        <input type="password" class="form-control mb-2" autocomplete="off" name="password_confirmation" placeholder="Confirma tu contraseña">
+        <input type="password" class="form-control mb-1" autocomplete="off" name="password_confirmation" placeholder="Confirma tu contraseña">
+        <a href="{{ route('login') }}" class="mb-2">¿Ya tienes una cuenta? Inicia sesión</a>
         <button type="submit" class="btn btn-primary formulario__boton-subir text-uppercase">registrate</button>
     </form>
 
