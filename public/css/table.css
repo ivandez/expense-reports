@@ -1,0 +1,28 @@
+.boton{
+    margin-left: 4%;
+}
+#table{
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    border-collapse: collapse;
+
+    border: 1px hidden #1C6EA4;
+border-radius: 5px;
+} 
+
+.table__tr{
+    background-color: #6c7ae0;
+    color: white;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f6ff;
+  }
+  
+.table__th-head{
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
