@@ -36,7 +36,7 @@ class ExpenseController extends Controller
     public function store(Request $request)
     {
         $expense = new Expense();
-// return $request;
+
         $expense->description = $request->descriptionInput;
 
         $expense->amount = $request->amountInput;
@@ -69,7 +69,7 @@ class ExpenseController extends Controller
      */
     public function edit($id)
     {
-        //
+        return $id;
     }
 
     /**

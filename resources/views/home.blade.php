@@ -17,25 +17,19 @@
         <th class="table__th-head">fecha</th>
         <th class="table__th-head">opciones</th>
     </tr>
+    @foreach($expenses as $expense)
     <tr>
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
-        <td><button type="button" class="btn btn-primary text-uppercase">modificar</button></td>
+        <td>{{ $expense->description }}</td>
+        <td>{{ $expense->amount }}</td>
+        <td class="expenseDate">{{ $expense->date }}</td>
+        <td><a href="{{ route('gasto.edit', ['gasto' => $expense->id]) }}"><button type="button" class="btn btn-primary text-uppercase">modificar</button></a></td>
     </tr>
-    <tr>
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
-        <td><button type="button" class="btn btn-primary text-uppercase">modificar</button></td>
-    </tr>
-    <tr>
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
-        <td><button type="button" class="btn btn-primary text-uppercase">modificar</button></td>
-    </tr>
+    @endforeach
     
 </table>
+
+@section('script')
+<script src="{{ asset('js/dateFormat.js') }}"></script>
+@endsection
 
 @endsection
