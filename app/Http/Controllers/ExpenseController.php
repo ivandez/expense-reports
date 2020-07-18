@@ -69,7 +69,9 @@ class ExpenseController extends Controller
      */
     public function edit($id)
     {
-        return $id;
+        $expense = Expense::findOrFail($id);
+
+        return view('expense.edit', compact('expense'));
     }
 
     /**
@@ -81,7 +83,18 @@ class ExpenseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $expense = Expense::findOrFail($id);
+
+        $expense->description = $request->descriptionInput;
+
+        $expense->amount = $request->amountInput;
+
+        $expense->date = $request->dateInput;
+
+        $expense->save();
+
+        return redirect('/home');
+
     }
 
     /**
