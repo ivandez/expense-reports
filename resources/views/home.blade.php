@@ -10,9 +10,9 @@
     </div>
 </div>
 
-<table id="table">
+<table id="table" class="sortable">
     <tr class="text-capitalize table__tr">
-        <th class="table__th-head">descripción</th>
+        <th class="table__th-head" data-type="string">descripción</th>
         <th class="table__th-head">gastado</th>
         <th class="table__th-head">fecha</th>
         <th class="table__th-head">opciones</th>
@@ -30,6 +30,7 @@
 
 @section('script')
 <script src="{{ asset('js/dateFormat.js') }}"></script>
+<script src="{{ asset('js/sorttable.js') }}"></script>
 @endsection
 
 @endsection
